@@ -1,0 +1,25 @@
+.transport-name {
+    color: #0d335d;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 700;
+    font-size: 20pt;
+    margin: 0;
+    line-height: 1rem;
+    transition: color .4s ease-in-out !important;
+    text-decoration: none !important;
+}
+
+.transport-card {
+    background-color: rgba(255,255,255,.3) !important;
+    border: none !important;
+    transition: background-color .4s ease-in-out !important;
+}
+
+.transport-card:hover{
+    background-color: rgba(255, 110, 64, .5) !important;
+}
+
+.transport-card:hover .transport-name{
+    color: #182330 !important;
+    text-decoration: none !important;
+}

@@ -1,0 +1,15 @@
+.not-found-code {
+    color: red !important;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 700;
+    font-size: 18pt;
+    line-height: 1rem;
+}
+
+.not-found-msg {
+    color:  #0d335d;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 500;
+    font-size: 14pt;
+    line-height: 1rem;
+}

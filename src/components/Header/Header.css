@@ -1,0 +1,35 @@
+.header-bg {
+    background-color: #94E1F6 !important;
+}
+
+.travelsphere {
+    color: #0d335d !important;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 700;
+    font-size: 20pt !important;
+}
+
+.nav-link {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
+    font-size: 13pt !important;
+}
+
+.nav-login-btn {
+    background-color: #FF6E40 !important;
+    border-radius: 5px;
+    color: white !important;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.nav-login-btn:hover {
+    background-color: white !important;
+    color: #FF6E40 !important;
+}
+
+.userName{
+    color: #0d335d !important;
+    font-weight: 600;
+}

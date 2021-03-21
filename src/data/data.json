@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Bike",
+        "role": "Bowler",
+        "image": "https://i.ibb.co/vQCWMCB/bike.png",
+        "salary": 150,
+        "onePerson": 10,
+        "twoPersons": 20,
+        "threePersons": 30
+    },
+    {
+        "name": "Car",
+        "role": "Bowler",
+        "image": "https://i.ibb.co/w7SvK1q/car.png",
+        "salary": 80,
+        "onePerson": 20,
+        "twoPersons": 30,
+        "threePersons": 40
+    },
+    {
+        "name": "Bus",
+        "role": "All-rounder",
+        "image": "https://i.ibb.co/vZ5hMm0/bus.png",
+        "salary": 130,
+        "onePerson": 5,
+        "twoPersons": 8,
+        "threePersons": 10
+    },
+    {
+        "name": "Train",
+        "role": "Wicket-keeper",
+        "image": "https://i.ibb.co/tL6cW5s/train.png",
+        "salary": 90,
+        "onePerson": 90,
+        "twoPersons": 170,
+        "threePersons": 250
+    }
+]

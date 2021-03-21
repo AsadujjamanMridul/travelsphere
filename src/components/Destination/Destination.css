@@ -1,0 +1,42 @@
+.select-destination{
+    background-color: rgba(255,255,255,.3);
+    border-radius: 10px;
+}
+
+.destination-form{
+    padding: 30px 0px;
+}
+
+.destination-form input{
+    display: block;
+    margin-top: 30px;
+    padding: 5px;
+    border-bottom: 1px solid gray;
+}
+
+.error{
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
+    font-size: 10pt;
+    color: red;
+}
+
+.hr-bg{
+    background-color: #94E1F6 !important;
+}
+
+hr{
+    background-color: #94E1F6 !important;
+    border: .01rem solid rgba(13, 51, 93, .4)  !important;
+    margin: 0 !important;
+}
+
+.destination-detail{
+    background-color: #FF6E40;
+    color: white;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 700;
+    font-size: 10pt;
+    padding: 20px 30px;
+    border-radius: 10px;
+}
