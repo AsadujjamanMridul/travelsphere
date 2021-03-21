@@ -8,6 +8,7 @@ import Header from '../Header/Header';
 import './Destination.css'
 import map from '../../images/map.png'
 import { TransportContext } from '../../App'
+import Map from '../Map/Map';
 
 const Destination = () => {
 
@@ -92,7 +93,7 @@ const Destination = () => {
                                         <h6>Journey Date: {travelDetails.journeyDate}</h6>
                                     </div>
                                     <div className="container-fluid d-flex align-items-center justify-content-between">
-                                        <img src={transportDetail.image} alt="..." className="w-25 my-3" />
+                                        <img src={transportDetail.image} alt="..." className="w-25 mt-4 mb-3" />
                                         <p>{transportDetail.name}</p>
                                         <p><FontAwesomeIcon icon={faUser} className='mr-2' />1</p>
                                         <p className='text-right'>${transportDetail.onePerson}</p>
@@ -112,8 +113,9 @@ const Destination = () => {
                                 </div>
                             </div>}
                     </div>
-                    <div className="m-auto col-md-8">
-                        <img src={map} alt="" className="w-100 my-3"/>
+                    <div className="m-auto col-md-8 py-5 map-area">
+                        {/* <img src={map} alt="" className="w-100 my-3"/> */}
+                        <Map/>
                     </div>
                 </div>
             </main>
