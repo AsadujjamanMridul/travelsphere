@@ -13,32 +13,36 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import NoMatch from './components/NoMatch/NoMatch';
 
 export const UserContext = createContext();
+export const TransportContext = createContext();
 
 function App() {
 
   const [loggedInUser, setLoggedInUser] = useState({})
+  const [selectedTransport, setSelectedTranspot] = useState('')
 
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-      <Router>
-        <Switch>
-          <Route path='/home'>
-            <Home />
-          </Route>
-          <PrivateRoute path='/destination/by_:transport'>
-            <Destination />
-          </PrivateRoute>
-          <Route path='/login/:user'>
-            <Login />
-          </Route>
-          <Route exact path='/'>
-            <Home />
-          </Route>
-          <Route exact path='*'>
-            <NoMatch/>
-          </Route>
-        </Switch>
-      </Router>
+      <TransportContext.Provider value={[selectedTransport, setSelectedTranspot]}>
+        <Router>
+          <Switch>
+            <Route path='/home'>
+              <Home />
+            </Route>
+            <PrivateRoute path='/destination/by_:transport'>
+              <Destination />
+            </PrivateRoute>
+            <Route path='/login/:user'>
+              <Login />
+            </Route>
+            <Route exact path='/'>
+              <Home />
+            </Route>
+            <Route exact path='*'>
+              <NoMatch />
+            </Route>
+          </Switch>
+        </Router>
+      </TransportContext.Provider>
     </UserContext.Provider>
   );
 }

@@ -1,16 +1,19 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faUserFriends, faUsers } from '@fortawesome/free-solid-svg-icons'
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import data from '../../data/data.json'
 import Header from '../Header/Header';
 import './Destination.css'
 import map from '../../images/map.png'
+import { TransportContext } from '../../App'
 
 const Destination = () => {
 
     const { transport } = useParams();
+    const [selectedTransport, setSelectedTranspot] = useContext(TransportContext);
+    setSelectedTranspot(transport);
 
     const [transports, setTransports] = useState([]);
     useEffect(() => {
@@ -38,17 +41,19 @@ const Destination = () => {
     const [travelDetails, setTravelDetails] = useState({
         pickFrom: '',
         isValid: false,
-        destination: ''
+        destination: '',
+        journeyDate: ''
     })
 
     const { register, handleSubmit, watch, errors } = useForm();
 
     const onSubmit = data => {
-        const { pickFrom, destination } = data;
+        const { pickFrom, destination, journeyDate } = data;
         const newTraveDetail = {
             pickFrom: pickFrom,
             destination: destination,
-            isValid: true
+            isValid: true,
+            journeyDate: journeyDate
         }
         setTravelDetails(newTraveDetail);
     }
@@ -71,6 +76,10 @@ const Destination = () => {
 
                                 < input className='input container-fluid' name="destination" ref={register({ required: true })} placeholder="Destination" />
                                 {errors.destination && <span className='error'>This field is required</span>}
+
+                                < input className='input container-fluid' name="journeyDate" type="date" ref={register({ required: true })} placeholder="Journey Date" />
+                                {errors.journeyDate && <span className='error'>This field is required</span>}
+
                                 <input className='container-fluid  submit-button' type="submit" value="Search" />
                             </form>}
                         {travelDetails.isValid &&
@@ -79,6 +88,8 @@ const Destination = () => {
                                     <div className="container-fluid destination-detail">
                                         <h5>From: {travelDetails.pickFrom}</h5>
                                         <h5>To: {travelDetails.destination}</h5>
+                                        <br/>
+                                        <h6>Journey Date: {travelDetails.journeyDate}</h6>
                                     </div>
                                     <div className="container-fluid d-flex align-items-center justify-content-between">
                                         <img src={transportDetail.image} alt="..." className="w-25 my-3" />

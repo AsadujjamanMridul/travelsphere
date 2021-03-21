@@ -1,12 +1,13 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css'
-import { UserContext } from '../../App'
+import { UserContext, TransportContext } from '../../App'
 
 
 const Header = () => {
 
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const [selectedTransport, setSelectedTranspot] = useContext(TransportContext);
 
     let loginButtonToggle;
     if (loggedInUser.name === undefined) {
@@ -29,7 +30,7 @@ const Header = () => {
                     <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                         <div className="navbar-nav">
                             <Link className="nav-link" aria-current="page" to="/home">Home</Link>
-                            <Link className="nav-link" to={`/destination/by_car`}>Destination</Link>
+                            <Link className="nav-link" to={`/destination/by_${selectedTransport ? selectedTransport : 'car'}`}>Destination</Link>
                             <a className="nav-link" href="#">Blog</a>
                             <a className="nav-link" href="#">Contact</a>
                             {
