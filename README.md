@@ -17,12 +17,14 @@ React • Firebase Auth
   <img src="screenshots/1.png" width="75%" align="center"/>
 </p>
 
+<br/>
 
 #### Login Page
 <p align="center">
   <img src="screenshots/1.png" width="75%" align="center"/>
 </p>
 
+<br/>
 
 #### Destination Page
 <p align="center">
