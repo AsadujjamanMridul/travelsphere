@@ -21,14 +21,14 @@ React • Firebase Auth
 
 #### Login Page
 <p align="center">
-  <img src="screenshots/1.png" width="75%" align="center"/>
+  <img src="screenshots/2.png" width="75%" align="center"/>
 </p>
 
 <br/>
 
 #### Destination Page
 <p align="center">
-  <img src="screenshots/1.png" width="75%" align="center"/>
+  <img src="screenshots/3.png" width="75%" align="center"/>
 </p>
 
 <br/>
